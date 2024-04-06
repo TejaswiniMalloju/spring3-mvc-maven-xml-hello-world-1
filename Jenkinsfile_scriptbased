@@ -3,7 +3,7 @@ node {
     def mvnHome
     stage('Preparation') { // for display purposes
         // Get some code from a GitHub repository
-        git 'https://github.com/betawins/spring3-mvc-maven-xml-hello-world-1.git'
+        git 'https://github.com/TejaswiniMalloju/spring3-mvc-maven-xml-hello-world-1.git'
         // Get the Maven tool.
         // ** NOTE: This 'M3' Maven tool must be configured
         // **       in the global configuration.
@@ -37,7 +37,7 @@ node {
                         nexusArtifactUploader(
                             nexusVersion: "nexus3",
                             protocol: "http",
-                            nexusUrl: "13.233.104.193:8081/",
+                            nexusUrl: "100.25.220.175:8081/",
                             groupId: pom.groupId,
                             version: '${BUILD_NUMBER}',
                             repository: "ncodeit-scripted",
