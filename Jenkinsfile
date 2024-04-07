@@ -18,8 +18,6 @@ pipeline {
         NEXUS_CREDENTIAL_ID = "ac589dfd-7804-4165-9611-9392ad8a7dc2"
     }
     stages {
-	    stage('Parallel Stage') {
-            parallel {
         stage("clone code") {
             steps {
                 script {
@@ -81,4 +79,3 @@ pipeline {
         }
     }
 }
-    }
